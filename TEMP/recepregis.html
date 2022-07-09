@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" >
+    <script src="{{ url_for('static', filename='all.js') }}"></script>
+
+    <!---Our Custom CSS Style sheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>RECEPTIONIST-DMS</title>
+  </head>
+  <body>
+    <form action="/recepregist" method="post">
+     <header>
+      <div class="p-1" id="topheader"  style="background-color: white;">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="#" style="padding-left: 50px;"><img  class="img-fluid" src="static\p.images\2022-03-07 (1).png" alt="image" style="width:400px;"></a>
+            <form class="d-flex">
+              <a href="mailto:cse200001052@iiti.ac.in" style="padding-right: 50px;"><button type="button" class="btn btn-info"><i class="fa-solid fa-envelope"></i> &nbsp; Get in Touch</button></a>
+            </form>
+          </div>
+        </nav>
+       </div>
+     </header>
+     <section>
+       <div class="container-fluid">
+        <div class="container pt-5 pb-5" style="width:30%;">
+        
+      
+       <div class="card text-center">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 style="text-align: center;">New to MEDX-CURE!.
+             </h3>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Create MEDX-CURE Account</h4>
+          <div class="card-text">
+            <form class="row g-3" method="post">
+              <div class="col-md-12" style="text-align: left;">
+                <label for="inputHospital Name4" class="form-label"><h6 class="text-muted">Hospital Name</h6></label>
+                <input type="hospital name" name="hospitalname" class="form-control" id="inputHospital Name4">
+              </div>
+              <div class="col-md-12" style="text-align: left;">
+                <label for="inputEmail4" class="form-label"><h6 class="text-muted">Email</h6></label>
+                <input type="email" class="form-control" name="email" id="inputEmail4">
+              </div>
+              <div class="col-md-6" style="text-align: left;">
+                <label for="inputpassword4" class="form-label"><h6 class="text-muted">Password</h6></label>
+                <input type="password" class="form-control" name="inputpassword" id="inputpassword4">
+              </div>
+              <div class="col-md-6" style="text-align: left;">
+                <label for="inputConfirm password4" class="form-label"><h6 class="text-muted">Confirm password</h6></label>
+                <input type="password" class="form-control" name="confirmpassword" id="inputConfirm password4">
+              </div>
+              <div class="col-xs-12">
+                <button type="submit" class="btn btn-secondary">Create</button>
+            </div>
+
+            </form>
+
+
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <h6>Already have an account?<a href="/receplogin">Sign In</a></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+     </section>
+     <section>
+     <footer class="full-footer">
+      <div class="container top-footer" style="text-align: center;">
+        <div class="row">
+          <div class="col-xs-12">
+            <h5>MEDX-CURE</h5><br>
+            <a class="p-1" href="mailto:cse200001052@iiti.ac.in" style="color: black;"><i class="fa-solid fa-envelope"></i>cse200001052@gmail.com</a><br>
+            <a class="p-1" href="tel:+918328460779" style="color: black;"><i class="fa-solid fa-phone"></i>+(91) 8328460779</a>
+            <a class="p-1" href="fax:+0123456789" style="color: black;"><i class="fa-solid fa-fax"></i>+0123456789</a><br><br>
+            <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-facebook"></i></a>
+            <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-twitter"></i></a>
+            <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-instagram"></i></a>
+
+
+
+          </div>
+         </div>
+       </div>
+       <div class="container-fluid bottom-footer pt-1" style="background-color:#f1f2f6;">
+         <div class="row">
+           <div class="col-xs-12" style="text-align: center;">
+             <p>All Copyrights are reserved</p>
+
+           </div>
+
+         </div>
+
+
+       </div>
+
+     </footer>
+    </section>
+    
+
+
+
+
+
+     <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="static\bootstrap.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!---
+    
+    <script src="bootstrap\js\popper.min.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+    -->
+  </form>
+  </body>
+  </html>

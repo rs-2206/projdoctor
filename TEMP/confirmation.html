@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" >
+    <script src="{{ url_for('static', filename='all.js') }}"></script>
+
+    <!---Our Custom CSS Style sheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+        <title>Appointment Confirmation</title>
+        <style>
+            #ticket{
+                border: 4px solid black;
+                padding: 1.5%;
+                width: fit-content;
+                margin-left: 4%;
+                font-family: Raleway;
+                color: white;
+                margin: auto;
+            }
+            button {
+          background-color: #535c68;
+          color: #ffffff;
+          border: none;
+          font-size: 17px;
+          font-family: Raleway;
+          cursor: pointer;
+          border: 2px solid grey;
+
+
+        }
+        </style>        
+    </head>
+    <body>
+        <header>
+            <div class="p-1" id="topheader"  style="background-color: white;">
+              <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid" style="background-color: white;">
+                  <a class="navbar-brand" href="#" style="padding-left: 50px;"><img  class="img-fluid" src="{{ url_for('static', filename='p.images/2022-03-07 (1).png') }}" alt="image" style="width:400px;"></a>
+                  <form class="d-flex">
+                    <a href="mailto:cse200001052@iiti.ac.in" style="padding-right: 50px;"><button type="button" class="btn btn-info"><i class="fa-solid fa-envelope"></i> &nbsp; Get in Touch</button></a>
+                  </form>
+                </div>
+              </nav>
+             </div>
+             <div id="bottomheader">
+                <div class="container-fluid">
+                  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#f1f2f6;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="homepage.html" style="font-size: 0.89rem;padding-left: 70px;">HOME</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                       <a class="nav-link disabled dropdown-toggle" href="records.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="font-size:  0.89rem;">RECORDS</a>
+                       <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                         <li><a class="dropdown-item" href="past.html" style="font-size:  0.89rem;">Past</a></li>
+                         <div class="dropdown-divider"></div>
+                         <li><a class="dropdown-item" href="present.html" style="font-size: 0.89rem;">Present</a></li>
+                       </ul>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="searchdept..html" style="font-size:  0.89rem;">SEARCH DEPT.</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="favouritedoctors.html" style="font-size: 0.89rem;">FAVOURITES</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="appointments.html" style="font-size:  0.89rem;">APPOINTMENTS</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="insurance.html" style="font-size: 0.89rem;">INSURANCE</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="blog.html" style="font-size:  0.89rem;">BLOG</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="aboutus.html" style="font-size: 0.89rem;">ABOUT US</a>
+                     </li>
+                     <li class="nav-item my-nav">
+                       <a class="nav-link disabled" href="contactus.html" style="font-size:  0.89rem;">CONTACT US</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="#"><i class="fa-brands fa-facebook"></i></a>
+                     </li>
+                     <li class="nav-item ">
+                       <a class="nav-link disabled" href="#"><i class="fa-brands fa-twitter"></i></a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="#"><i class="fa-brands fa-instagram"></i></a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link disabled" href="user.html"><i class="fa-solid fa-circle-user" style="color: green;"></i></a>
+                     </li>
+       
+       
+                    </ul>
+       
+                  </nav>
+       
+                </div>
+                
+              </div>
+            </header>
+             <section>
+              <div class="container"style="padding-top: 50px;padding-bottom: 30px;width: 80%;margin: auto;">
+                   <div class="row">
+                    <div class="col-md-6" style="height: 375px;padding-right: 0px;">
+                        <img src="{{ url_for('static', filename='p.images/2022-04-13 (6).png') }}" class="img-fluid" alt="image" style="height: 375px;">
+                       </div>
+                       <div class="col-md-6" style="height: 375px;margin: auto;padding-top: 40px;text-align: center;background-color: #7f8c8d;padding-left: 0px;">
+                        <div class="col-md-12" style="padding-top: 0px;padding-bottom: 20px;">
+                        <form id = "Logout" action="/" enctype="multipart/form-data">
+                            <button class="button"type="submit">Logout</button>
+                          </form>
+                        </div>
+                        <div class="col-md-12" style="padding-top: 0px;padding-bottom: 20px;">
+                        <form id = "Logout" action="/register1" enctype="multipart/form-data" style="padding-top: 0px;padding-bottom: 0px;">
+                          <button class="button" type="submit">Return to Home</button>
+                        </form>
+                    </div>
+                        <form id = "Appointment"  action= "/confirm" method="post" style="text-align: center;">
+                        <div id="htmlContent" style="text-align: center;padding-top: 0px;">
+                          <h3 style="text-align: center;color: whitesmoke;">Appointment Details</h3>
+                          <p style="color: whitesmoke;">Patientname={{p[0][1]}} <br> 
+                          Doctorname={{q[0][2]}}<br>
+                          Hospitalname={{q[0][1]}}<br>
+                          Date = {{r[0][2]}}</p>
+                
+                        </div>
+                        </form>
+                        <div id="editor" style="text-align: center;">
+                              <button id="generatePDF">Generate PDF</button>
+                        </div>
+                    <script>
+                    var doc = new jsPDF();
+                    var specialElementHandlers = {
+                        '#editor': function (element, renderer) {
+                            return true;
+                        }
+                    };
+                    
+                    $('#generatePDF').click(function () {
+                        doc.fromHTML($('#htmlContent').html(), 15, 15, {
+                            'width': 700,
+                            'elementHandlers': specialElementHandlers
+                        });
+                        doc.save('Appointment Details.pdf');
+                    });
+                    
+                    </script>
+                    </form>
+                  </div>
+                </div>
+                </div>
+  </section>
+  <section>
+    <footer class="full-footer">
+     <div class="container top-footer" style="text-align: center;">
+       <div class="row">
+         <div class="col-xs-12">
+           <h5>MEDX-CURE</h5><br>
+           <a class="p-1" href="mailto:cse200001052@iiti.ac.in" style="color: black;"><i class="fa-solid fa-envelope"></i>cse200001052@gmail.com</a><br>
+           <a class="p-1" href="tel:+918328460779" style="color: black;"><i class="fa-solid fa-phone"></i>+(91) 8328460779</a>
+           <a class="p-1" href="fax:+0123456789" style="color: black;"><i class="fa-solid fa-fax"></i>+0123456789</a><br><br>
+           <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-facebook"></i></a>
+           <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-twitter"></i></a>
+           <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-instagram"></i></a>
+
+
+
+         </div>
+        </div>
+      </div>
+      <div class="container-fluid bottom-footer pt-1" style="background-color:#f1f2f6;">
+        <div class="row">
+          <div class="col-xs-12" style="text-align: center;">
+            <p>All Copyrights are reserved</p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+   </footer>
+  </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+</body>
+</html>

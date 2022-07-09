@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="static\bootstrap.min.css" rel="stylesheet" >
+    <script src="static\all.js"></script>
+    
+    <!---Our Custom CSS Style sheet-->
+    <link rel="stylesheet" href="static/style.css">
+    <title>APPOINTMENTS.RECEPTIONIST.UPCOMING-DMS</title>
+  </head>
+  <body>
+     <header>
+       <div class="p-1" id="topheader"  style="background-color: white;">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="#" style="padding-left: 50px;"><img  class="img-fluid" src="static/p.images/2022-03-07 (1).png" alt="image" style="width:400px;"></a>
+          <form class="d-flex">
+            <a href="mailto:cse200001052@iiti.ac.in" style="padding-right: 50px;"><button type="button" class="btn btn-info"><i class="fa-solid fa-envelope"></i> &nbsp; Get in Touch</button></a>
+          </form>
+        </div>
+        </nav>
+       </div>
+       <div id="bottomheader">
+         <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#f1f2f6;">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link" href="rhome" style="font-size: 0.89rem;padding-left: 70px;">HOME</a>
+               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="adddoctors" style="font-size: 0.89rem;">ADD DOCTORS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="release" style="font-size:  0.89rem;">RELEASE SLOTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="rappointments" style="font-size:  0.89rem;">APPOINTMENTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="raboutus" style="font-size: 0.89rem;">ABOUT US</a>
+              </li>
+              <li class="nav-item my-navy">
+                <a class="nav-link" href="rcontactus" style="font-size:  0.89rem;">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="role" style="color: green;"><i class="fa-solid fa-circle-user"></i></a>
+              </li>
+
+
+             </ul>
+
+           </nav>
+
+         </div>
+         
+       </div>
+
+     </header>
+
+
+     <section>
+       <div class="container">
+         <div class="row">
+           <div class="col-md-3" style="padding-top: 30px;">
+            <div class="card" style="text-align: center;">
+              <img src="static/p.images/2022-04-03 (1).png" class="card-img-top text-center my-img" alt="profile" style="height: 80px;width: 100px;border-radius: 50%;">
+              <div class="card-body">
+                <h5 class="card-title text-muted">{{a}}</h5>
+                <p class="card-text text-muted">Total Appointments:{{k}}<br></p>
+                <a href="recepregis" class="btn btn-secondary btn-sm">Update Profile</a>
+              </div>
+            </div>
+           </div>
+            <div class="col-md-9" style="padding-left: 40px;padding-top: 20px;">
+              <h3 class="text-muted">Appointments List</h3>
+              <p class="text-muted">View  upcoming and previous appointments in hospital in which some are no-show appointments<br>
+                Time Zone:India Standard Time(GMT+5:30)</p>
+                <div class="container overflow">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                    <ul class="nav nav-tabs">
+                     <li class="nav-item" style="width: 50%;">
+                        <a class="nav-link" href="rappointments"style="color: #bdc3c7;" >Upcoming</a>
+                      </li>
+                      <li class="nav-item" style="width: 50%;">
+                        <a class="nav-link active" aria-current="page" href="#">History</a>
+                      </li>
+                    </ul>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in c%}
+                    {% if i[5] != "Not Completed" %}
+                    <tr>
+                      <td colspan="2">{{i[0]}}</td>
+                      <td colspan="2">{{i[2]}}</td>
+                      <td colspan="2">{{i[4]}}</td>
+                      <td colspan="2">{{i[3]}}</td>
+                      <td colspan="2">{{i[7]}}</td>
+                      <td colspan="2" style="color: green;">{{i[5]}}</td>
+                      {% if i[5] != "Not Showed" %}
+                      <td colspan="2"><a href="/rpa/{{i[0]}}/{{i[2]}}/{{i[4]}}">Not Showed</a></td>
+                      {%endif%}
+                    <tr>
+                    {%endif%}
+                    {%endfor%}
+                  </tbody>
+                </table>
+              </div>
+              </div>
+         </div>
+       </div>
+       </section>
+
+     <!--start footer-->
+     </section>
+    <section class="pt-5">
+     <footer class="full-footer">
+       <div class="container top-footer" style="text-align: center;">
+         <div class="row">
+           <div class="col-xs-12">
+             <h5>MEDX-CURE</h5><br>
+             <a class="p-1" href="mailto:cse200001052@iiti.ac.in" style="color: black;"><i class="fa-solid fa-envelope"></i>cse200001052@gmail.com</a><br>
+             <a class="p-1" href="tel:+918328460779" style="color: black;"><i class="fa-solid fa-phone"></i>+(91) 8328460779</a>
+             <a class="p-1" href="fax:+0123456789" style="color: black;"><i class="fa-solid fa-fax"></i>+0123456789</a><br><br>
+             <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-facebook"></i></a>
+             <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-twitter"></i></a>
+             <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-instagram"></i></a>
+
+
+
+           </div>
+          </div>
+        </div>
+        <div class="container-fluid bottom-footer pt-1" style="background-color:#f1f2f6;">
+          <div class="row">
+            <div class="col-xs-12" style="text-align: center;">
+              <p>All Copyrights are reserved</p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+     </footer>
+    </section>
+
+
+
+
+
+
+     <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="static\bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!---
+    
+    <script src="bootstrap\js\popper.min.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+    -->
+    
+  </body>
+  </html>
