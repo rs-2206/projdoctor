@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet" >
+    <script src="{{ url_for('static', filename='all.js') }}"></script>
+
+    <!---Our Custom CSS Style sheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>HOME-DMS</title>
+  </head>
+  <body>
+    <form id="regForm" action="/register1" method="post" enctype="multipart/form-data">
+     <header>
+       <div class="p-1" id="topheader"  style="background-color: white;">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid" style="background-color: white;">
+            <a class="navbar-brand" href="#" style="padding-left: 50px;"><img  class="img-fluid" src="{{ url_for('static', filename='p.images/2022-03-07 (1).png') }}" alt="image" style="width:400px;"></a>
+            <form class="d-flex">
+              <a href="mailto:cse200001052@iiti.ac.in" style="padding-right: 50px;"><button type="button" class="btn btn-info"><i class="fa-solid fa-envelope"></i> &nbsp; Get in Touch</button></a>
+            </form>
+          </div>
+        </nav>
+       </div>
+       <div id="bottomheader">
+         <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#f1f2f6;">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link active" href="register1" style="font-size: 0.89rem;padding-left: 70px;">HOME</a>
+               </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="records" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="font-size:  0.89rem;">RECORDS</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
+                  <li><a class="dropdown-item" href="action" style="font-size:  0.89rem;">Past</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="present" style="font-size: 0.89rem;">Present</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="search" style="font-size:  0.89rem;">SEARCH DEPT.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favourites" style="font-size: 0.89rem;">FAVOURITES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="appointments" style="font-size:  0.89rem;">APPOINTMENTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="insurance" style="font-size: 0.89rem;">INSURANCE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog" style="font-size:  0.89rem;">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus" style="font-size: 0.89rem;">ABOUT US</a>
+              </li>
+              <li class="nav-item my-nav">
+                <a class="nav-link" href="contactus" style="font-size:  0.89rem;">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logout" style="color: green;"><i class="fa-solid fa-circle-user"></i></a>
+              </li>
+
+
+             </ul>
+
+           </nav>
+
+         </div>
+         
+       </div>
+
+     </header>
+
+
+     <section>
+       <div class="container-fluid pt-1">
+       <div class="row">
+         <div class="col-md-12">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img  src="{{ url_for('static', filename='p.images/2022-03-08 (1).png') }}" style="height:650px;" class="d-block w-100" alt="image">
+                
+              </div>
+              <div class="carousel-item">
+                <img  src="{{ url_for('static', filename='p.images/2022-03-08 (2).png') }}" style="height: 650px;" class="d-block w-100" alt="image">
+               
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='p.images/2022-03-08 (4).png') }}" style="height: 650px;" class="d-block w-100" alt="image">
+                
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+
+
+         </div>
+         </div>
+         </div>
+
+
+
+
+
+
+     </section>
+     <section>
+       <div class="container pt-3 pb-5"  style="width: 70%;">
+      <div class="row row-cols-1 row-cols-md-3 g-4" >
+        <div class="col">
+          <div class="card h-100"">
+            <img src="{{ url_for('static', filename='p.images/2022-03-10 (4).png') }}" style="height: 300px;;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">Booking Appointment</h5><hr>
+              <p class="card-text">On our website, clients may schedule their own appointments with their favourite providers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{ url_for('static', filename='p.images/2022-03-11 (3).png') }}" style="height: 300px;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">Forms</h5><hr>
+              <p class="card-text">Filling the online registration forms allows you to access the MEDX-CURE universe.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{ url_for('static', filename='p.images/2022-03-10 (2).png') }}" style="height: 300px;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">Vaccination</h5><hr>
+              <p class="card-text">Because prevention is better than cure, strive to prevent various infectious illnesses by getting vaccinated. Clients may arrange an appointment to be vaccinated on our website.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{ url_for('static', filename='p.images/2022-03-10 (3).png') }}" style="height: 300px;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">Interaction</h5><hr>
+              <p class="card-text">Patients are precisely diagnosed by their scheduled doctors at planned sessions so that they might be cured successfully.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{ url_for('static', filename='p.images/2022-03-11 (1).png') }}" style="height: 300px;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">Giving Feedback</h5><hr>
+              <p class="card-text">Clients can provide comments regarding their booked doctors so that it can be relevant to future patients.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{ url_for('static', filename='p.images/2022-03-11.png') }}" style="height: 300px;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title">Doctor's Details</h5><hr>
+              <p class="card-text">Clients may view their booked doctor's information on our website.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+       
+
+     </section>
+     <section>
+     <div class="container pt-2 pb-3" style="text-align: center;">
+       <div class="row">
+         <div class="col-xs-12">
+           <img class="img-fluid" src="{{ url_for('static', filename='p.images/2022-03-10 (1).png') }}"  alt="image" style="width: 50px;"><br>
+           <h5>Opening hours for Appointments</h5><br>
+           <h6>Here when you Need Us</h6><br>
+           <p></p>Monday - Friday<br>
+           8:00am - 6:00pm</p>
+           <p>Saturday and Sunday<br>
+            8:30am - 1:00pm</p>
+
+         </div>
+       </div>
+     </div>
+
+
+     </section>
+     <section>
+       <div class="row">
+         <div class="col-xs-12">
+           <h3 style="text-align: center;">Explore through it!</h3>
+
+         </div>
+       </div>
+
+
+     </section>
+     <section>
+       <div class="container pt-3 pb-2" style="width: 60%;">
+         <div class="row">
+           <div class="col-md-6">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ url_for('static', filename='p.images/2022-03-10 (8).png') }}" style="height:400px;" class="d-block w-100" alt="image">
+                  <div class="carousel-caption d-none d-md-block">
+                   <h5 style="text-align: right;"><a href="food" style="color: #eb3b5a;"><i class="fa-solid fa-key"></i></a></h5> 
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+           </div>
+           <div class="col-md-6">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ url_for('static', filename='p.images/2022-03-10 (7).png') }}" style="height:400px;" class="d-block w-100" alt="image">
+                  <div class="carousel-caption d-none d-md-block">
+                  <h5 style="text-align: right;"><a href="hygiene" style="color: #eb3b5a;"><i class="fa-solid fa-key"></i></a></h5> 
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+           </div>
+         </div>
+       </div>
+       <section>
+         <div class="container pt-0 pb-5" style="width: 60%;">
+           <div class="row">
+             <div class="col-xs-12">
+              <h5 style="text-align: right;"><a href="blog" style="color: #718093;"><i class="fa-solid fa-circle-plus"></i>More</a></h5> 
+
+             </div>
+           </div>
+         </div>
+
+       </section>
+
+     <!--start footer-->
+     </section>
+    <section>
+     <footer class="full-footer">
+      <div class="container top-footer" style="text-align: center;">
+        <div class="row">
+          <div class="col-xs-12">
+            <h5>MEDX-CURE</h5><br>
+            <a class="p-1" href="mailto:cse200001052@iiti.ac.in" style="color: black;"><i class="fa-solid fa-envelope"></i>cse200001052@gmail.com</a><br>
+            <a class="p-1" href="tel:+918328460779" style="color: black;"><i class="fa-solid fa-phone"></i>+(91) 8328460779</a>
+            <a class="p-1" href="fax:+0123456789" style="color: black;"><i class="fa-solid fa-fax"></i>+0123456789</a><br><br>
+            <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-facebook"></i></a>
+            <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-twitter"></i></a>
+            <a class="p-1" href="#" style="color: black;"><i class="fa-brands fa-instagram"></i></a>
+
+
+
+          </div>
+         </div>
+       </div>
+       <div class="container-fluid bottom-footer pt-1" style="background-color:#f1f2f6;">
+         <div class="row">
+           <div class="col-xs-12" style="text-align: center;">
+             <p>All Copyrights are reserved</p>
+
+           </div>
+
+         </div>
+
+
+       </div>
+
+
+
+
+     </footer>
+    </section>
+
+
+
+
+
+
+     <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!---
+    
+    <script src="bootstrap\js\popper.min.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+    -->
+  </form>
+  </body>
+  </html>
