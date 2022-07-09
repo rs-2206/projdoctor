@@ -1,6 +1,6 @@
 # Hospital Slot Booking
 
-Patients can make inquiries about a doctor's availability based on their schedule, make appointments, and cancel them using the doctor management system. The creation and development of a database that houses data about numerous doctors is the aim of this case study. By providing the information, patients can search for doctors. The names of any doctors who are on call will be listed. Patients can then cancel the appointment by going to the cancellation page.
+Patients can make inquiries about a doctor's availability based on their schedule, make appointments, and cancel them using the Hospital Slot Booking. The creation and development of a database that houses data about numerous doctors is the aim of this case study. By providing the information, patients can search for doctors. The names of any doctors who are on call will be listed. Patients can then cancel the appointment by going to the cancellation page.
 
 ### TEMP
 All of the html files and associated stylings are contained in this folder, including pages for login, registration, searching for physicians, cancelling and booking appointments, blogging, contacting us, learning more about us, adding doctors, releasing slots, and favourite doctors.
